@@ -1,0 +1,37 @@
+//Imports
+@import './scss/_fonts.scss';
+@import './scss/_variables.scss';
+@import './scss/_scrollbar.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: $background;
+}
+
+.App {
+  display: grid;
+  gap: 0 0;
+
+  //Media queries
+  @media (min-width: 1px) and (max-width: 999px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 50px;
+    grid-template-areas:
+    "Header"
+    "Main"
+    "Socials";
+  }
+
+  @media (min-width: 1000px) and (max-width: 2160px) {
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas:
+    "Header Header"
+    "Socials Main";
+  }
+}

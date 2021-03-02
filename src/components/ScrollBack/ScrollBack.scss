@@ -1,0 +1,24 @@
+@import "../../scss/_variables.scss";
+
+.ScrollBack {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  cursor: pointer;
+  animation: scrollBackAppear .5s ease-in-out;
+  transition: transform .1s ease-in-out;
+
+  &__icon {
+    color: $gray;
+    transition: color .2s ease-in-out;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &:active {
+    transform: translateY(5px);
+  }
+}

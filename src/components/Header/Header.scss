@@ -1,0 +1,90 @@
+@import '../../scss/_variables.scss';
+@import "../../scss/_animations.scss";
+
+.Header {
+  grid-area: Header;
+  padding: 20px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'RobotoMono-Thin', serif;
+  transition: top .4s;
+  animation: headerAppear .5s ease-in-out;
+  z-index: 999;
+
+  &__logo {
+    display: inline-block;
+    color: $dark-green;
+    transition: color .2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      color: lighten($dark-green, 10%);
+    }
+  }
+
+  &__nav-list {
+    display: inline-block;
+  }
+
+  &__list-item {
+    display: inline-block;
+    margin: 0.7em;
+    cursor: pointer;
+  }
+
+  &__item-link {
+    color: $white;
+    position: relative;
+
+    &:hover::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 5px;
+      margin-left: 3px;
+      width: 1px;
+      height: 15px;
+      background-color: $white;
+      animation: blink .6s infinite;
+    }
+  }
+
+  &__cv-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: $dark-green;
+    border: 1px solid $dark-green;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0.7em;
+    width: 80px;
+    font-family: 'RobotoMono-Light', serif;
+    text-align: center;
+    transition: border-color .2s ease-in-out, color .3s ease-in-out;
+
+    &:hover {
+      border-color: lighten($dark-green, 10%);
+      color: lighten($dark-green, 10%);
+    }
+  }
+
+  &__btn-name {
+    margin-right: 5px;
+    font-weight: 600;
+  }
+
+  &__download-icon {
+    margin-left: 5px;
+  }
+
+  @media (min-width: 1px) and (max-width: 999px) {
+    &__navigation {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "../../scss/_variables.scss";
+@import "../../scss/_animations.scss";
+
+.Socials {
+  grid-area: Socials;
+
+  &__wrapper {
+    position: fixed;
+    bottom: 20px;
+    left: 90px;
+    animation: .4s socialsAppear ease-in-out;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 200px;
+      background-color: $gray;
+      margin: 0 auto;
+    }
+  }
+
+  &__list-item {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    color: $gray;
+    transition: color .4s;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

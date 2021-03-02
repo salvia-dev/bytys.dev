@@ -1,0 +1,66 @@
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes socialsAppear {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  100% {
+    left: 90px;
+    opacity: 1;
+  }
+}
+
+@keyframes headerAppear {
+  0% {
+    top: -60px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes scrollBackAppear {
+  0% {
+    right: -20px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes mainBeforeAppear {
+  0% {
+    right: 500px;
+    opacity: 0;
+  }
+  100% {
+    right: 50px;
+    opacity: 1;
+  }
+}
+
+@keyframes mainAfterAppear {
+  0% {
+    top: 800px;
+    opacity: 0;
+  }
+  100% {
+    top: 80px;
+    opacity: 1;
+  }
+}
