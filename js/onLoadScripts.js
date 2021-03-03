@@ -28,4 +28,19 @@ window.onload = () => {
             scrollTop: $("body").offset().top
         },'slow');
     });
+
+
+    const hamburger = document.querySelector('.Header__hamburger');
+    const nav = document.querySelector('.Header__navigation');
+
+    const handleClick = () => {
+        hamburger.classList.toggle('Header__hamburger--active');
+        nav.classList.toggle('Header__navigation--active');
+
+        document.querySelector('body').style.overflow === "" ?
+            document.querySelector('body').style.overflow = "hidden" :
+                document.querySelector('body').style.overflow = ""
+    }
+
+    hamburger.addEventListener('click', handleClick);
 }
