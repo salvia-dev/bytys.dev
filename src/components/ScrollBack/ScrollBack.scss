@@ -21,4 +21,9 @@
   &:active {
     transform: translateY(5px);
   }
+
+  //Media queries
+  @media (min-width: 1px) and (max-width: 999px) {
+    display: none;
+  }
 }

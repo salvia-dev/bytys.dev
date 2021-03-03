@@ -21,16 +21,6 @@
     color: $gray;
   }
 
-  &__about,
-  &__projects,
-  &__work {
-    margin-bottom: 450px;
-  }
-
-  &__contact {
-    margin-bottom: 400px;
-  }
-
   &::before {
     content: "";
     position: absolute;
@@ -53,7 +43,36 @@
     animation: .4s .1s mainAfterAppear ease-in-out;
   }
 
+  //Media queries
+  @media (min-width: 1px) and (max-width: 999px) {
+    padding: 150px 15% 0 15%;
+
+    &::before, &::after {
+      display: none;
+    }
+
+    &__about,
+    &__projects,
+    &__work {
+      margin-bottom: 300px;
+    }
+
+    &__contact {
+      margin-bottom: 220px;
+    }
+  }
+
   @media (min-width: 1000px) and (max-width: 2160px) {
     padding: 200px 30% 0 15%;
+
+    &__about,
+    &__projects,
+    &__work {
+      margin-bottom: 450px;
+    }
+
+    &__contact {
+      margin-bottom: 400px;
+    }
   }
 }

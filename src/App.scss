@@ -20,7 +20,7 @@ html, body {
   //Media queries
   @media (min-width: 1px) and (max-width: 999px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr 50px;
+    grid-template-rows: 100px 1fr 100px;
     grid-template-areas:
     "Header"
     "Main"

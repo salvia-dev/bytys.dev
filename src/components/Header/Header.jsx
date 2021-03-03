@@ -6,6 +6,11 @@ function Header() {
             <div className="Header__logo">
                 <i className="fal fa-code fa-4x"></i>
             </div>
+            <button className="Header__hamburger">
+                <div className="Header__hamburger-box">
+                    <span className="Header__hamburger-inner"></span>
+                </div>
+            </button>
             <nav className="Header__navigation">
                 <ol className="Header__nav-list">
                     <li className="Header__list-item"><span className="Header__item-link" id="about">.about();</span></li>

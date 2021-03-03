@@ -5,9 +5,6 @@
   grid-area: Socials;
 
   &__wrapper {
-    position: fixed;
-    bottom: 20px;
-    left: 90px;
     animation: .4s socialsAppear ease-in-out;
 
     &::after {
@@ -20,17 +17,42 @@
     }
   }
 
-  &__list-item {
-    display: block;
-    margin-bottom: 20px;
-  }
-
   &__icon {
     color: $gray;
     transition: color .4s;
 
     &:hover {
       color: $white;
+    }
+  }
+
+  //Media queries
+  @media (min-width: 1px) and (max-width: 999px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__wrapper {
+      &::before, &::after {
+        display: none;
+      }
+    }
+    &__list-item {
+      display: inline-block;
+      margin: 20px;
+    }
+  }
+
+  @media (min-width: 1000px) and (max-width: 2160px) {
+    &__wrapper {
+      position: fixed;
+      left: 90px;
+      bottom: 20px;
+    }
+
+    &__list-item {
+      display: block;
+      margin-bottom: 20px;
     }
   }
 }
