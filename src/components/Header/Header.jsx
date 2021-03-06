@@ -6,7 +6,7 @@ function Header() {
             <div className="Header__logo">
                 <i className="fal fa-code fa-4x"></i>
             </div>
-            <button className="Header__hamburger">
+            <button className="Header__hamburger" aria-label="Menu">
                 <div className="Header__hamburger-box">
                     <span className="Header__hamburger-inner"></span>
                 </div>
