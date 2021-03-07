@@ -150,19 +150,47 @@
     &__navigation {
       position: absolute;
       top: 0;
+      left: 0;
       background-color: $white;
       width: 100%;
-      height: 9999px;
-      transform: translateX(100%);
-      transition: transform .3s .1s ease-in-out;
+      height: 100vh;
+      opacity: 0;
+      transition: opacity .2s ease-in-out;
 
       &--active {
-        transform: translateX(-2%);
+        opacity: 1;
       }
     }
 
     &__nav-list {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 100px;
+    }
+
+    &__list-item {
+      margin-bottom: 50px;
+    }
+
+    &__item-link {
+      color: $black;
+      font-size: 1.2em;
+      font-weight: 600;
+
+      &:hover::after {
+        display: none;
+      }
+    }
+
+    &__cv-btn {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 2px solid $dark-green;
+      width: 90px;
+      padding: 7px;
     }
   }
 
